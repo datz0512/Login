@@ -1,4 +1,1 @@
-# LogInPage
-# LoginPage
-# loginPage
-# Login
+# LogIn
