@@ -1,3 +1,1 @@
 # LogInPage
-# LogInPage
-# LoginPage
