@@ -27,7 +27,12 @@ useEffect(() => {
   };
 
   return (
-      <AuthContext.Provider valu e={{ isLoggedIn: isLoggedIn }}>
+      <AuthContext.Provider 
+        value={{ 
+          isLoggedIn: isLoggedIn ,
+          onLogout: logoutHandler,
+        }}
+      >
         <MainHeader />
         <main>
           {!isLoggedIn && <Login onLogin={loginHandler} />}
