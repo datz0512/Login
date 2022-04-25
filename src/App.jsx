@@ -17,8 +17,6 @@ useEffect(() => {
   }, [isLoggedIn])
 
   const loginHandler = (email, password) => {
-    // We should of course check email and password
-    // But it's just a dummy/ demo anyways
     localStorage.setItem('isLoggedIn', '1');
     setIsLoggedIn(true);
   };
@@ -29,8 +27,8 @@ useEffect(() => {
   };
 
   return (
-      <AuthContext.Provider value={{ isLoggedIn: isLoggedIn }}>
-        <MainHeader onLogout={logoutHandler} />
+      <AuthContext.Provider valu e={{ isLoggedIn: isLoggedIn }}>
+        <MainHeader />
         <main>
           {!isLoggedIn && <Login onLogin={loginHandler} />}
           {isLoggedIn && <Home onLogout={logoutHandler} />}
