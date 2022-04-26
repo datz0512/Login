@@ -3,7 +3,7 @@ import AuthContext from '../../store/auth-context';
 
 import classes from './Navigation.module.scss';
 
-const Navigation = (props) => {
+const Navigation = () => {
   const context = useContext(AuthContext)
 
   return (
