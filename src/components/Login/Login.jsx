@@ -1,8 +1,9 @@
-import React, { useState, useEffect, useReducer} from 'react'
+import React, { useState, useEffect, useReducer, useContext } from 'react'
 
 import Card from '../UI/Card/Card';
 import classes from './Login.module.scss';
 import Button from '../UI/Button/Button';
+import AuthContext from '../../store/auth-context';
 
 const emailReducer = (state, action) => {
   if(action.type === 'USER_INPUT'){
@@ -43,6 +44,8 @@ const Login = (props) => {
 
   const [formIsValid, setFormIsValid] = useState(false);
 
+  const authContext = useContext(AuthContext);
+
   useEffect(() => {
     const indentifier = setTimeout(() => {
       console.log('Checking form validity');
@@ -75,7 +78,7 @@ const Login = (props) => {
 
   const submitHandler = (event) => {
     event.preventDefault();
-    props.onLogin(emailState.value, passwordState.value);
+    authContext.onLogin(emailState.value, passwordState.value);
   };
 
   return (

@@ -25,7 +25,7 @@ const Navigation = () => {
           </li>
         )}
       </ul>
-    </nav>     
+    </nav>
   );
 };
 
