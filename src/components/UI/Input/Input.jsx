@@ -2,17 +2,17 @@ import React, { useRef, useImperativeHandle } from "react";
 import classes from "./Input.module.scss";
 
 const Input = React.forwardRef((props, ref) => {
-    const inputRef = useRef()
-    
-    const activate = () => {
-        inputRef.current.focus()
-    };
+  const inputRef = useRef();
 
-    useImperativeHandle(ref , () => {
-        return {
-            focus: activate
-        }
-    })
+  const activate = () => {
+    inputRef.current.focus();
+  };
+
+  useImperativeHandle(ref, () => {
+    return {
+      focus: activate,
+    };
+  });
 
   return (
     <div

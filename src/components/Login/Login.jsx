@@ -91,9 +91,9 @@ const Login = () => {
     if (formIsValid) {
       authContext.onLogin();
     } else if (!emailIsValid) {
-      emailInputRef.current.focus()
+      emailInputRef.current.focus();
     } else {
-      passwordInputRef.current.focus()
+      passwordInputRef.current.focus();
     }
   };
 
